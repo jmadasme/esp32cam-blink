@@ -32,6 +32,56 @@ arduino-cli compile --fqbn esp32:esp32:esp32cam .
 
 Para cargar, GPIO0 debe estar a GND y la placa necesita una fuente de 5 V estable. El LED es GPIO4 en la AI-Thinker.
 
+<!-- ficha -->
+## Ficha de evaluación
+
+**Madurez global: 3.2/5**
+
+| Criterio | Nota | Evidencia |
+|---|---:|---|
+| Madurez | 1/5 | Un sketch de pocas decenas de líneas, sin estado, sensores ni manejo de errores. |
+| Reproducibilidad | 5/5 | Sin dependencias externas; compila con el core ESP32 y el FQBN esp32cam declarado. |
+| Documentación | 4/5 | Datasheet con consumos y pines, más guía de desarrollador con estructura del código y pruebas. |
+| Honestidad de límites | 4/5 | Aclara que no usa la cámara y que el parpadeo no valida el sensor OV2640. |
+| Valor demostrativo | 2/5 | Demuestra el bring-up y la toolchain de carga, con un alcance deliberadamente mínimo. |
+| Facilidad de despliegue | 3/5 | Cargar exige adaptador USB-TTL y la secuencia GPIO0/RST; no hay auto-reset ni placa con puerto integrado. |
+
+Prueba de bring-up correcta y honesta sobre su alcance: sirve para descartar alimentación y modo de carga antes de abordar la cámara o el video.
+
+## Lo que no funcionó
+
+### esp32cam-blink — Alimentación insuficiente
+
+La placa consume unos 250 mA con el LED encendido y no debe alimentarse desde el pin de 3,3 V del adaptador USB-TTL. El datasheet indica usar la entrada de 5 V del regulador y una fuente estable, porque la caída de tensión es el fallo más habitual en esta placa.
+
+### esp32cam-blink — Carga manual con GPIO0 y RST
+
+El upload exige poner GPIO0 a GND, pulsar RST, cargar y volver a resetear sin ese puente. No hay auto-reset por USB, de modo que omitir la secuencia deja la placa en modo normal y el puerto no responde como se espera.
+
+## Preguntas típicas
+
+**¿Por qué no inicia la cámara?**
+
+Este sketch no la usa. Su objetivo es probar la placa y la carga.
+
+**¿Qué LED parpadea?**
+
+El de flash, conectado a GPIO4 en la AI-Thinker.
+
+**¿Puedo usar otra placa?**
+
+Sí, cambiando el pin del LED y el FQBN.
+
+**¿Necesito la cámara conectada?**
+
+No para el blink.
+
+**¿Es un proyecto educativo?**
+
+Sí, es la primera práctica de la placa.
+
+<!-- /ficha -->
+
 ## Documentación
 
 - [`docs/datasheet.md`](docs/datasheet.md) — instalación, operación y límites.
@@ -39,9 +89,9 @@ Para cargar, GPIO0 debe estar a GND y la placa necesita una fuente de 5 V establ
 - [`docs/REFERENCES.md`](docs/REFERENCES.md) — estándares, librerías y fuentes.
 - [`docs/index.html`](docs/index.html) — página del proyecto (GitHub Pages).
 
-## Alcance y honestidad
+## El proyecto en detalle
 
-## ESP32-CAM Blink LED
+### ESP32-CAM Blink LED
 
 Proyecto Arduino minimalista que hace parpadear el LED de flash blanco integrado (GPIO 4) de la placa **ESP32-CAM (AI-Thinker)** con un ciclo de 1 segundo encendido y 1 segundo apagado.
 

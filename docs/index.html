@@ -134,6 +134,75 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
   .stat{border-right:0;border-bottom:1px solid var(--line)}
   h1{font-size:42px}
 }
+
+/* ── Contenido heredado del proyecto original, en clave sobria ── */
+.rich{max-width:78ch}
+.rich p{margin:0 0 14px;color:#c3d4da}
+.rich h3{margin:26px 0 10px;font-size:19px;letter-spacing:-.02em}
+.rich h4{margin:22px 0 8px;font-size:15px;letter-spacing:-.01em}
+.rich ul,.rich ol{margin:0 0 16px;padding-left:22px;color:#c3d4da}
+.rich li{margin:0 0 6px}
+.rich figure{margin:22px 0;border:1px solid var(--line);border-radius:16px;padding:10px;background:rgba(11,34,43,.5)}
+.rich figure img{width:100%;display:block;border-radius:10px}
+.rich figcaption{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:9px;line-height:1.5}
+.rich .table-wrap{overflow-x:auto;margin:18px 0;border:1px solid var(--line);border-radius:12px}
+.rich table{border-collapse:collapse;width:100%;font-size:13.5px}
+.rich th,.rich td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.rich th{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:rgba(11,34,43,.6)}
+.rich tr:last-child td{border-bottom:0}
+.rich pre{margin:18px 0;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#04141a;overflow-x:auto;font-family:var(--mono);font-size:12px;line-height:1.6;color:#cfe3e8}
+.rich code{font-family:var(--mono);font-size:.92em}
+.rich .note{margin:18px 0;padding:13px 16px;border-left:2px solid var(--accent);background:rgba(42,157,143,.07);color:#c3d4da;font-size:14px}
+.rich .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.rich .card-grid .card{margin:0}
+
+
+.rich h3{margin:26px 0 8px}
+.rich p{margin:0 0 14px;color:var(--muted);line-height:1.7}
+.fail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:6px}
+.fail{background:rgba(11,34,43,.55);border:1px solid var(--line);border-radius:14px;padding:18px}
+.fail .v{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--warm,#D6A86A)}
+.fail h3{font-size:16px;margin:8px 0 6px}
+.fail p{font-size:14px;margin:0;color:var(--muted)}
+.rating-head{display:flex;align-items:center;gap:20px;margin:6px 0 18px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(11,34,43,.55)}
+.rating-avg{font-family:var(--mono);font-size:40px;line-height:1;color:var(--accent)}
+.rating-avg small{font-size:14px;color:var(--muted)}
+.rating-head p{margin:4px 0 0;font-size:14px;color:var(--muted);max-width:70ch}
+.rating{display:grid;gap:2px}
+.rating-row{display:grid;grid-template-columns:165px minmax(90px,1fr) 48px;gap:14px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.rating-row:last-child{border-bottom:0}
+.rating-name{font-size:13.5px;font-weight:600}
+.rating-bar{height:6px;border-radius:99px;background:rgba(148,190,200,.14);overflow:hidden}
+.rating-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.rating-score{font-family:var(--mono);font-size:12.5px;color:var(--accent);text-align:right}
+.rating-note{grid-column:2/-1;font-size:12.5px;color:var(--muted);margin-top:-4px}
+.faq{display:grid;gap:0;margin-top:4px}
+.faq details{border-bottom:1px solid var(--line);padding:14px 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:15px;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+";display:inline-block;width:18px;color:var(--accent);font-family:var(--mono)}
+.faq details[open] summary::before{content:"–"}
+.faq p{margin:10px 0 0 18px;font-size:14px;color:var(--muted)}
+@media(max-width:720px){
+  .fail-grid{grid-template-columns:1fr}
+  .rating-head{flex-direction:column;align-items:flex-start}
+  .rating-row{grid-template-columns:120px 1fr 44px}
+}
+
+
+.detail h2{margin:34px 0 10px;font-size:24px;letter-spacing:-.02em}
+.detail h3{margin:24px 0 8px;font-size:17px}
+.detail p{margin:0 0 14px;color:var(--muted);line-height:1.75}
+.detail ul,.detail ol{margin:0 0 16px 20px;color:var(--muted)}
+.detail li{margin:6px 0}
+.detail table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+.detail th,.detail td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+.detail th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+.detail pre{background:rgba(6,20,27,.75);border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:13px}
+.detail code{font-family:var(--mono);font-size:.92em}
+.detail img{max-width:100%;border-radius:12px;border:1px solid var(--line)}
+.detail blockquote{border-left:2px solid var(--accent);margin:14px 0;padding:2px 0 2px 16px;color:var(--muted)}
+
 </style>
 <link rel="stylesheet" href="assets/community.css?v=1">
 </head>
@@ -182,34 +251,191 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
   <a href="https://github.com/jmadasme/esp32cam-blink/tree/main/versions/esp32cam-blink" target="_blank" rel="noopener">Ver carpeta <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 </article></div>
 </div></section>
-
-<section class="section tight"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">03 — Cómo se usa</div><h2>De la carpeta a la práctica.</h2></div>
-  <div class="timeline"><div class="step reveal"><div class="step-n">01</div><h4>Alimentá con 5 V</h4><p>La placa es sensible a la caída de tensión.</p></div><div class="step reveal"><div class="step-n">02</div><h4>Poné GPIO0 a GND</h4><p>Modo de carga para el primer firmware.</p></div><div class="step reveal"><div class="step-n">03</div><h4>Cargá el sketch</h4><p>Placa AI-Thinker y velocidad conservadora.</p></div><div class="step reveal"><div class="step-n">04</div><h4>Quitá GPIO0 de GND</h4><p>Reiniciá y verificá el parpadeo.</p></div></div>
-</div></section>
-
-<section class="section tight"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">04 — Decisiones</div><h2>Lo que lo hace distinto</h2></div>
-  <div class="features"><div class="feature reveal"><h4>Prueba mínima</h4><p>Sin cámara, sin WiFi, sin librerías.</p></div><div class="feature reveal"><h4>GPIO4</h4><p>El LED de flash de la AI-Thinker.</p></div><div class="feature reveal"><h4>Diagnóstico rápido</h4><p>Distingue placa muerta de firmware mal cargado.</p></div><div class="feature reveal"><h4>Documentado</h4><p>Datasheet y guía de código incluidos.</p></div><div class="feature reveal"><h4>Repetible</h4><p>Se carga en segundos.</p></div><div class="feature reveal"><h4>Base de otros proyectos</h4><p>Confirma la toolchain antes de sumar complejidad.</p></div></div>
-</div></section>
-
-<section class="section tight" id="stack"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">05 — Stack y arranque</div><h2>Con qué está construido</h2></div>
-  <div class="stack-grid">
-    <div class="reveal"><div class="chips"><span class="chip">ESP32-CAM</span><span class="chip">AI-Thinker</span><span class="chip">OV2640</span><span class="chip">Arduino C++</span></div><div class="note"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Para cargar, GPIO0 debe estar a GND y la placa necesita una fuente de 5 V estable. El LED es GPIO4 en la AI-Thinker.</span></div></div>
-    <div class="terminal reveal"><div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><pre>git clone https://github.com/jmadasme/esp32cam-blink.git
-cd esp32cam-blink/versions/esp32cam-blink
-arduino-cli compile --fqbn esp32:esp32:esp32cam .</pre></div>
-  </div>
-</div></section>
-
-<section class="section tight" id="docs"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">06 — Documentación</div><h2>Para usar y para entender.</h2><p class="section-sub">Cada documento está en el repositorio, versionado junto al código.</p></div>
-  <div class="docs"><a class="doc reveal" href="https://github.com/jmadasme/esp32cam-blink/blob/main/docs/datasheet.md" target="_blank" rel="noopener"><span class="tag">DATASHEET</span><h4>Manual de operación</h4><p>Instalación, configuración, uso y diagnóstico.</p></a><a class="doc reveal" href="https://github.com/jmadasme/esp32cam-blink/blob/main/docs/developer.md" target="_blank" rel="noopener"><span class="tag">DEVELOPER</span><h4>Guía de código</h4><p>Arquitectura, módulos, contratos y extensión.</p></a><a class="doc reveal" href="https://github.com/jmadasme/esp32cam-blink/blob/main/docs/REFERENCES.md" target="_blank" rel="noopener"><span class="tag">REFERENCES</span><h4>Referencias</h4><p>Estándares, librerías y fuentes oficiales.</p></a></div>
-</div></section>
-
-<section class="section tight"><div class="wrap"><div class="note reveal"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span><strong>Preservación:</strong> las versiones se copiaron sin <code>.git</code>, <code>node_modules</code>, entornos virtuales, compilados ni bases de datos. Los tokens y claves detectados fueron redactados; las plantillas <code>.example</code> se conservan. Las limitaciones conocidas están en la documentación, no escondidas.</span></div></div></section>
-
+<section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">El concepto</div><h2>Qué es y por qué existe</h2></div><div class="rich reveal"><p>Sketch mínimo para la ESP32-CAM AI-Thinker: enciende y apaga el LED de flash en GPIO4 cada segundo y escribe el estado por el puerto serie. No inicializa cámara, WiFi ni tarjeta SD.</p><p>Es una prueba de bring-up, no un proyecto de visión. Sirve para separar dos problemas que suelen confundirse: una placa mal alimentada o mal puesta en modo de carga, y un firmware que no corresponde. Importa porque la ESP32-CAM falla con frecuencia por corriente insuficiente o por el proceso de carga, y conviene descartar esas causas antes de atribuir el fallo al sensor OV2640 o al código de la aplicación.</p></div></div></section>
+<section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">El proyecto en detalle</div><h2>Documentación preservada</h2><p class="section-sub">El README original de la versión de referencia, completo.</p></div><div class="detail rich reveal">
+<p>Proyecto Arduino minimalista que hace parpadear el LED de flash blanco integrado (GPIO 4) de la placa <strong>ESP32-CAM (AI-Thinker)</strong> con un ciclo de 1 segundo encendido y 1 segundo apagado.</p>
+<h2 id="principio-de-funcionamiento">Principio de funcionamiento</h2>
+<p>La ESP32-CAM AI-Thinker tiene un LED de flash blanco de alta intensidad montado en la PCB junto a la lente de la cámara OV2640. Este LED está conectado al GPIO 4 del ESP32 y es controlado mediante un transistor MOSFET de canal N que permite conmutarlo con la lógica de 3.3V del microcontrolador.</p>
+<p>El sketch configura el GPIO 4 como salida digital y alterna su estado entre HIGH y LOW cada 1000 ms, generando un parpadeo continuo.</p>
+<h2 id="especificaciones-tecnicas">Especificaciones técnicas</h2>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Placa</td>
+<td>ESP32-CAM (AI-Thinker)</td>
+</tr>
+<tr>
+<td>Microcontrolador</td>
+<td>ESP32-D0WD-V3 (Xtensa LX6 dual-core @ 240 MHz)</td>
+</tr>
+<tr>
+<td>LED</td>
+<td>Flash blanco integrado en GPIO 4</td>
+</tr>
+<tr>
+<td>Ciclo de parpadeo</td>
+<td>1s ON / 1s OFF</td>
+</tr>
+<tr>
+<td>Flash usado</td>
+<td>298 KB (9% de 4 MB)</td>
+</tr>
+<tr>
+<td>RAM usada</td>
+<td>22 KB (6% de 320 KB)</td>
+</tr>
+<tr>
+<td>Puerto serie</td>
+<td>115200 baud</td>
+</tr>
+<tr>
+<td>FQBN</td>
+<td><code>esp32:esp32:esp32cam</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="mapa-de-pines">Mapa de pines</h2>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Modo</th>
+<th>Conexión</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPIO 4</td>
+<td>OUTPUT</td>
+<td>LED Flash blanco integrado</td>
+<td>HIGH = encendido, LOW = apagado</td>
+</tr>
+<tr>
+<td>GPIO 1</td>
+<td>U0TXD</td>
+<td>TX del monitor serie</td>
+<td>Conectar al RX del adaptador USB-TTL</td>
+</tr>
+<tr>
+<td>GPIO 3</td>
+<td>U0RXD</td>
+<td>RX del monitor serie</td>
+<td>Conectar al TX del adaptador USB-TTL</td>
+</tr>
+<tr>
+<td>5V</td>
+<td>POWER</td>
+<td>Alimentación 5V</td>
+<td>Conectar al VCC del adaptador USB-TTL</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>POWER</td>
+<td>Tierra común</td>
+<td>Conectar al GND del adaptador USB-TTL</td>
+</tr>
+<tr>
+<td>GPIO 0</td>
+<td>INPUT</td>
+<td>Boot mode (programación)</td>
+<td>Conectar a GND durante el upload</td>
+</tr>
+</tbody>
+</table>
+<h2 id="diagrama-de-conexion">Diagrama de conexión</h2>
+<pre><code>┌──────────────────────────────────┐
+│       ADAPTADOR USB-TTL          │
+│  ┌───────────┐    ┌──────────┐   │
+│  │  USB a PC │    │ PINES:   │   │
+│  │           │    │ TX  ─────┼───┼──── GPIO 3 (U0RXD)
+│  │           │    │ RX  ─────┼───┼──── GPIO 1 (U0TXD)
+│  │           │    │ 5V  ─────┼───┼──── VCC (5V)
+│  │           │    │ GND ─────┼───┼──── GND
+│  └───────────┘    └──────────┘   │
+└──────────────────────────────────┘
+         │
+         │ USB
+         ▼
+      [PC/Laptop]
+</code></pre>
+<p><strong>Nota:</strong> La ESP32-CAM no tiene puerto USB nativo. Requiere un adaptador USB-TTL (FTDI, CP2102, CH340, etc.) conectado a sus pines serie.</p>
+<h2 id="requisitos-previos">Requisitos previos</h2>
+<ol>
+<li><strong>Arduino CLI</strong> instalado (<code>arduino-cli</code>)</li>
+<li><strong>Core ESP32</strong> instalado:
+   <code>bash
+   arduino-cli core install esp32:esp32</code></li>
+<li><strong>Adaptador USB-TTL</strong> (FTDI/CP2102/CH340) conectado a la ESP32-CAM:
+   - TX del adaptador → GPIO 3 (U0RXD) de la ESP32-CAM
+   - RX del adaptador → GPIO 1 (U0TXD) de la ESP32-CAM
+   - 5V del adaptador → VCC de la ESP32-CAM
+   - GND del adaptador → GND de la ESP32-CAM</li>
+<li>Permisos de acceso al puerto serie (<code>dialout</code> en Linux)</li>
+</ol>
+<h2 id="instalacion-y-uso">Instalación y uso</h2>
+<h3 id="1-clonar-o-copiar-los-archivos">1. Clonar o copiar los archivos</h3>
+<pre><code class="language-bash">git clone &lt;url-del-repositorio&gt;
+cd esp32cam-blink
+</code></pre>
+<h3 id="2-compilar">2. Compilar</h3>
+<pre><code class="language-bash">arduino-cli compile --fqbn esp32:esp32:esp32cam esp32cam-blink.ino
+</code></pre>
+<h3 id="3-subir-a-la-placa">3. Subir a la placa</h3>
+<ol>
+<li>Conecta <strong>GPIO 0 a GND</strong> (modo programación).</li>
+<li>Presiona el botón <strong>RST</strong> (reset) de la ESP32-CAM.</li>
+<li>Ejecuta:
+   <code>bash
+   arduino-cli upload -p /dev/ttyUSB0 --fqbn esp32:esp32:esp32cam esp32cam-blink.ino</code></li>
+<li>Al finalizar, <strong>desconecta GPIO 0 de GND</strong> y presiona <strong>RST</strong> nuevamente.</li>
+</ol>
+<h3 id="4-verificar-funcionamiento">4. Verificar funcionamiento</h3>
+<p>El LED blanco de la ESP32-CAM debe comenzar a parpadear (1s encendido, 1s apagado).</p>
+<p>Para ver los mensajes del monitor serie:</p>
+<pre><code class="language-bash">arduino-cli monitor -p /dev/ttyUSB0 -c baudrate=115200
+</code></pre>
+<p>Deberías ver:</p>
+<pre><code>ESP32-CAM Blink iniciado
+LED Flash en GPIO 4 | Ciclo: 1000ms ON / 1000ms OFF
+LED ON
+LED OFF
+LED ON
+LED OFF
+...
+</code></pre>
+<h2 id="calibracion">Calibración</h2>
+<p>No requiere calibración. Si se desea cambiar la velocidad de parpadeo, modificar la constante <code>BLINK_DELAY_MS</code> en <code>esp32cam-blink.ino</code>:</p>
+<pre><code class="language-cpp">const int BLINK_DELAY_MS = 500;  // Parpadeo más rápido (0.5 segundos)
+</code></pre>
+<h2 id="advertencias">Advertencias</h2>
+<ul>
+<li>⚠️ <strong>Alimentación</strong>: La ESP32-CAM consume hasta ~300 mA con el LED encendido. Asegúrate de que el adaptador USB-TTL pueda suministrar al menos 500 mA.</li>
+<li>⚠️ <strong>Polaridad</strong>: Verifica las conexiones TX ↔ RX cruzadas entre el adaptador y la ESP32-CAM.</li>
+<li>⚠️ <strong>GPIO 0</strong>: No olvides conectar GPIO 0 a GND durante la programación y desconectarlo después.</li>
+<li>⚠️ <strong>Cámara OV2640</strong>: No se utiliza en este proyecto, pero su presencia no interfiere con el LED de flash.</li>
+<li>🔥 <strong>El LED de flash puede calentarse</strong>: El LED blanco es de alta potencia. No tocar directamente durante el funcionamiento prolongado.</li>
+</ul>
+<h2 id="archivos-del-proyecto">Archivos del proyecto</h2>
+<pre><code>esp32cam-blink/
+├── esp32cam-blink.ino   # Sketch principal
+├── README.md            # Esta documentación
+├── PLAN.md              # Plan de implementación
+├── AUDIT_REPORT.md      # Informe de auditoría
+├── .gitignore           # Exclusiones git
+└── docs/
+    ├── datasheet.md     # Documentación de usuario
+    └── developer.md     # Documentación técnica del código
+</code></pre>
+<h2 id="licencia">Licencia</h2>
+<p>Proyecto educativo de código abierto.</p></div></div></section>
+<section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">Lo que no funcionó</div><h2>Los tropiezos, documentados</h2><p class="section-sub">Las primeras versiones existen para que estos errores no se repitan: cada una dejó una decisión de diseño verificable.</p></div><div class="fail-grid reveal"><div class="fail"><div class="v">esp32cam-blink</div><h3>Alimentación insuficiente</h3><p>La placa consume unos 250 mA con el LED encendido y no debe alimentarse desde el pin de 3,3 V del adaptador USB-TTL. El datasheet indica usar la entrada de 5 V del regulador y una fuente estable, porque la caída de tensión es el fallo más habitual en esta placa.</p></div><div class="fail"><div class="v">esp32cam-blink</div><h3>Carga manual con GPIO0 y RST</h3><p>El upload exige poner GPIO0 a GND, pulsar RST, cargar y volver a resetear sin ese puente. No hay auto-reset por USB, de modo que omitir la secuencia deja la placa en modo normal y el puerto no responde como se espera.</p></div></div></div></section><section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">Ficha de evaluación</div><h2>Cómo se mide este proyecto</h2><p class="section-sub">Seis criterios con la misma escala en todo el catálogo, para comparar sin marketing.</p></div><div class="rating-head reveal"><div class="rating-avg">3.2<small>/5</small></div><div><strong>Madurez global</strong><p>Prueba de bring-up correcta y honesta sobre su alcance: sirve para descartar alimentación y modo de carga antes de abordar la cámara o el video.</p></div></div><div class="rating reveal"><div class="rating-row"><div class="rating-name">Madurez</div><div class="rating-bar"><i style="width:20%"></i></div><div class="rating-score">1/5</div><div class="rating-note">Un sketch de pocas decenas de líneas, sin estado, sensores ni manejo de errores.</div></div><div class="rating-row"><div class="rating-name">Reproducibilidad</div><div class="rating-bar"><i style="width:100%"></i></div><div class="rating-score">5/5</div><div class="rating-note">Sin dependencias externas; compila con el core ESP32 y el FQBN esp32cam declarado.</div></div><div class="rating-row"><div class="rating-name">Documentación</div><div class="rating-bar"><i style="width:80%"></i></div><div class="rating-score">4/5</div><div class="rating-note">Datasheet con consumos y pines, más guía de desarrollador con estructura del código y pruebas.</div></div><div class="rating-row"><div class="rating-name">Honestidad de límites</div><div class="rating-bar"><i style="width:80%"></i></div><div class="rating-score">4/5</div><div class="rating-note">Aclara que no usa la cámara y que el parpadeo no valida el sensor OV2640.</div></div><div class="rating-row"><div class="rating-name">Valor demostrativo</div><div class="rating-bar"><i style="width:40%"></i></div><div class="rating-score">2/5</div><div class="rating-note">Demuestra el bring-up y la toolchain de carga, con un alcance deliberadamente mínimo.</div></div><div class="rating-row"><div class="rating-name">Facilidad de despliegue</div><div class="rating-bar"><i style="width:60%"></i></div><div class="rating-score">3/5</div><div class="rating-note">Cargar exige adaptador USB-TTL y la secuencia GPIO0/RST; no hay auto-reset ni placa con puerto integrado.</div></div></div></div></section><section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">Preguntas típicas</div><h2>Lo que suelen preguntar</h2></div><div class="faq reveal"><details><summary>¿Por qué no inicia la cámara?</summary><p>Este sketch no la usa. Su objetivo es probar la placa y la carga.</p></details><details><summary>¿Qué LED parpadea?</summary><p>El de flash, conectado a GPIO4 en la AI-Thinker.</p></details><details><summary>¿Puedo usar otra placa?</summary><p>Sí, cambiando el pin del LED y el FQBN.</p></details><details><summary>¿Necesito la cámara conectada?</summary><p>No para el blink.</p></details><details><summary>¿Es un proyecto educativo?</summary><p>Sí, es la primera práctica de la placa.</p></details></div></div></section>
 <section class="cta"><div class="wrap"><div class="cta-box reveal">
   <div class="kicker">Siguiente paso</div><h2>¿Te animás?</h2>
   <p>Usá esta familia como base para esp32-cam blink. Está documentada para que puedas entenderla, ejecutarla y continuarla sin adivinar.</p>
